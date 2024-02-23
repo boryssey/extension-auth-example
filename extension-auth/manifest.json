@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Extension Auth Example",
+    "version": "1.0",
+    "description": "This extension is an example of a cookie based auth aproach.",
+    "permissions": [
+        "storage",
+        "cookies"
+    ],
+    "host_permissions": [
+        "http://localhost/*",
+        "https://61d0-2001-8a0-6d0c-de00-fced-1e23-dee2-8f67.ngrok-free.app/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "content_scripts": [
+        {
+          "matches": ["https://google.com/*", "https://www.google.com/*", "http://localhost/*"],
+          "js": ["content.js"]
+        }
+      ]
+}

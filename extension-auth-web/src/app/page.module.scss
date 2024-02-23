@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+  gap: 20px;
+  align-items: flex-start;
+  * {
+    flex: 0;
+  }
+}
